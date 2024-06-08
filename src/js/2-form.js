@@ -26,16 +26,17 @@ form.addEventListener('submit', event => {
   const formData = new FormData(form);
   const email = formData.get('email');
   const message = formData.get('message');
+
   if (!email || !message) {
     alert('Fill please all fields');
   } else {
     const data = { email, message };
     console.log(data);
-  }
 
-  form.reset();
-  localStorage.removeItem('email');
-  localStorage.removeItem('message');
+    form.reset();
+    localStorage.removeItem('email');
+    localStorage.removeItem('message');
+  }
 });
 
 //===============================================================
