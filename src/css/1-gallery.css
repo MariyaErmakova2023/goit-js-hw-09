@@ -40,3 +40,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+.sl-overlay {
+  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+  $sl-caption-background: #000;
+}
