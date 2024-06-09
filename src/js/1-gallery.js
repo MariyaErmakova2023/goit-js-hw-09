@@ -87,14 +87,6 @@ const markup = images
 const list = document.querySelector('.gallery');
 list.innerHTML = markup;
 
-//запрет загрузки изобажений
-const imageLinks = document.querySelectorAll('.gallery-link');
-imageLinks.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-  });
-});
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionPosition: 'bottom',
