@@ -20,8 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // const message = loadFromLS('message');
   const savedData = loadFromLS(STORAGE_KEY);
   // console.log(savedData);
-  form.elements.email.value = savedData.email;
-  form.elements.message.value = savedData.message;
+  if (savedData) {
+    form.elements.email.value = savedData.email;
+    form.elements.message.value = savedData.message;
+  }
 });
 
 form.addEventListener('submit', event => {
